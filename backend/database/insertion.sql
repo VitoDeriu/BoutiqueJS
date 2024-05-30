@@ -40,5 +40,15 @@ INSERT INTO collections (collection_name) VALUES
     ('Champion 2023');
 
 INSERT INTO skin (collection_id, arme_id, price, reduction, image_path, icone_path, background_path, description) VALUES
-(1, 1, 20, NULL, NULL, NULL, NULL, Couteau Kuronami),
-(2, 1, 20, NULL, NULL, NULL, NULL, Couteau Ion),
+(1, 1, 20, NULL, NULL, NULL, NULL, 'Couteau Kuronami'),
+(2, 1, 20, NULL, NULL, NULL, NULL, 'Couteau Ion'),
+(3, 1, 20, NULL, NULL, NULL, NULL, 'Couteau Oni'),
+(4, 2, 20, NULL, NULL, NULL, NULL, 'Classic Glitchpop'),
+(5, 2, 20, NULL, NULL, NULL, NULL, 'Classic Prime'),
+(6, 2, 35, NULL, NULL, NULL, NULL, 'Classic Spectrum'),
+(3, 3, 20, NULL, NULL, NULL, NULL, 'Shorty Oni'),
+(7, 3, 20, NULL, NULL, NULL, NULL, 'Shorty SOTL'),
+(8, 3, 20, NULL, NULL, NULL, NULL, 'Shorty PTC'),
+(5, 4, 20, NULL, NULL, NULL, NULL, 'Frenzy Prime'),
+(4, 4, 20, NULL, NULL, NULL, NULL, 'Frenzy Glitchpop'),
+(2, 4, 20, NULL, NULL, NULL, NULL, 'Frenzy Ion');
