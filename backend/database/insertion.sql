@@ -96,4 +96,4 @@ INSERT INTO skin (collection_id, arme_id, price, reduction, image_path, icone_pa
 (, 18, 20, NULL, NULL, NULL, NULL, 'Odin Spectrum');
 
 INSERT INTO images (image_path, skin_id) VALUES
-                                             ('/img/00_knife/ion/ion_knife.png', )
+                                             ('', )
