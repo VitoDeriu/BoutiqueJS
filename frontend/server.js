@@ -8,7 +8,7 @@ const router = require("./router/router");
 
 //Reglage du serveur
 app.set("view engine", "ejs");
-app.use("/public/", express.static("assets"));
+app.use("/public/", express.static("asset"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true})); //truc de julien 
 app.use(cors());
