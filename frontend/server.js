@@ -7,7 +7,8 @@ const cors = require('cors');
 const router = require("./router/router");
 
 //Reglage du serveur
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
 app.use("/public/", express.static("asset"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true})); //truc de julien 
@@ -17,4 +18,4 @@ app.use(router);//bien appeller le routeur après toutes les reglages si non ca 
 const port =  3000;
 const host = 'localhost';
 
-app.listen(port, host, () => console.log(`server front listening on port http://${host}:${port}`));
+app.listen(port, '0.0.0.0' , () => console.log(`server front listening on port http://${host}:${port}`));
