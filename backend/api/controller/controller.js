@@ -33,6 +33,14 @@ class ControllerTest {
         })
     }
 
+    static GetImage(req, res) {
+        ModelTest.GetImage().then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
+
     static GetImageId(req, res) {
         ModelTest.GetImageId(req.params.id).then(data => {
             return res.json(data);

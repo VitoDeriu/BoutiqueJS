@@ -33,7 +33,7 @@ class ModelsTest {
 
     static GetSkin() {
         return new Promise ((resolve, reject) => {
-            const sqlRequest = 'SELECT * FROM skin';
+            const sqlRequest = 'SELECT * FROM skins';
             sql.query(sqlRequest, (err, data) => {
                 if (err) {
                     reject(err);
@@ -46,7 +46,7 @@ class ModelsTest {
 
     static GetSkinId(id) {
         return new Promise ((resolve, reject) => {
-            let sqlRequest = sql.format('SELECT * FROM skin WHERE skins.id_skin = ?', [id]);
+            let sqlRequest = sql.format('SELECT * FROM skins WHERE skins.id_skin = ?', [id]);
             sql.query(sqlRequest, (err, data) => {
                 if (err) {
                     reject(err);
@@ -61,9 +61,22 @@ class ModelsTest {
         })
     }
 
+    static GetImage() {
+        return new Promise ((resolve, reject) => {
+            const sqlRequest = 'SELECT * FROM images';
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(data)
+            })
+        })
+    }
+
     static GetImageId(id) {
         return new Promise ((resolve, reject) => {
-            let sqlRequest = sql.format('SELECT * FROM image WHERE images.id_image = ?', [id]);
+            let sqlRequest = sql.format('SELECT * FROM images WHERE images.id_image = ?', [id]);
             sql.query(sqlRequest, (err, data) => {
                 if (err) {
                     reject(err);
