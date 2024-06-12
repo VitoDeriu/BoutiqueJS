@@ -60,6 +60,23 @@ class ModelsTest {
             })
         })
     }
+
+    static GetImageId(id) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format('SELECT * FROM image WHERE images.id_image = ?', [id]);
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
 }
 
 module.exports = ModelsTest;
