@@ -8,7 +8,7 @@ main{
 
 .ctn-product{
     margin: 20px;
-    background-color: rgb(109, 109, 109);
+    background-color: rgb(159, 159, 159)    ;
     width: 80vw;
     height: 70vh;
     display: flex;
@@ -32,35 +32,38 @@ main{
 
 .name-product{
     height: 15%;
-    padding: 8px;
     display: flex;
     align-items: center;
     font-size: 2em;
-    
+    padding: 15px;
 }
 
 .description{
-    height: 50%;
+    height: 55%;
+    padding: 30px;
 }
 
 .price{
     height: 15%;
     font-size: 2em;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
+    padding: 15px;
 }
 
 .btn-cart{
     height: 15%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    background-color: #dcdcdc;
+    background-color: rgb(255, 255, 255);
+
 }
 
-.ctn-sugest{
+.ctn-suggest{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
