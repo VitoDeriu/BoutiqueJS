@@ -48,6 +48,30 @@ class ControllerTest {
             return res.status(500).json(err);
         })
     }
+
+    static GetVariante(req, res) {
+        ModelTest.GetVariante().then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
+
+    static GetVarianteId(req, res) {
+        ModelTest.GetVarianteId(req.params.id).then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
+
+    static GetArmesTypeId(req, res) {
+        ModelTest.GetArmesTypeId(req.params.id).then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
 }
 
 module.exports = ControllerTest;
