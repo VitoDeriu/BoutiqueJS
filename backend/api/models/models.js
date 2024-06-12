@@ -13,6 +13,23 @@ class ModelsTest {
             })
         })
     }
+
+    static GetArmeId(id) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format('SELECT * FROM armes WHERE id = ?', [id]);
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
 }
 
 module.exports = ModelsTest;

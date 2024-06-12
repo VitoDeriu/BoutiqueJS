@@ -8,6 +8,14 @@ class ControllerTest {
             return res.status(500).json(err);
         })
     }
+
+    static GetArmeId(req, res) {
+        ModelTest.GetArmeId(req.params.id).then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
 }
 
 module.exports = ControllerTest;
