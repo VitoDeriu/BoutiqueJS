@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended:true}));
 // app.use(rateLimit);
 
 //automatiqe l'appel (l'initialisation) des routes dans l'application en créant des chemins absolut pour chaque fichier de router et en les intégrants dans l'application express
-const boutiqueRoutes = path.join(__dirname, "./router/armes");
+const boutiqueRoutes = path.join(__dirname, "./router/armes", "./router/arme/:id", "./router/skins", "./router/skin/:id", "./router/images", "./router/image/:id", "./router/variantes", "./router/variante/:id", "./router/armes/type/:id");
 
 
 app.use('/', require('./router/router'));
