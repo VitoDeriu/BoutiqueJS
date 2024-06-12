@@ -30,6 +30,36 @@ class ModelsTest {
             })
         })
     }
+
+    static GetSkin() {
+        return new Promise ((resolve, reject) => {
+            const sqlRequest = 'SELECT * FROM skin';
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(data)
+            })
+        })
+    }
+
+    static GetSkinId(id) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format('SELECT * FROM skin WHERE skins.id_skin = ?', [id]);
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
 }
 
 module.exports = ModelsTest;

@@ -16,6 +16,22 @@ class ControllerTest {
             return res.status(500).json(err);
         })
     }
+
+    static GetSkin(req, res) {
+        ModelTest.GetSkin().then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
+
+    static GetSkinId(req, res) {
+        ModelTest.GetSkinId(req.params.id).then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
 }
 
 module.exports = ControllerTest;
