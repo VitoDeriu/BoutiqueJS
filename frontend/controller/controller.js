@@ -17,8 +17,6 @@ exports.Armes = (req, res) => {
     });
 }
 
-
-
 async function GetArmes(){
     try {
         const data = await fetch('http://localhost:4000/armes');
