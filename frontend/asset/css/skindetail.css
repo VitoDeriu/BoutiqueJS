@@ -39,7 +39,7 @@ main{
 }
 
 .description{
-    height: 55%;
+    height: 45%;
     padding: 30px;
 }
 
@@ -80,4 +80,14 @@ main{
     margin: 10px;
     height: 90%;
     width: 400px;
+}
+
+.ctn-icones{
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.space-icone{
+    width: 30%;
 }
