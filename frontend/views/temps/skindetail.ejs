@@ -3,47 +3,26 @@
     <head>
         <%- include('../components/head') %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/public/css/skindetail.css" />
+        <link rel="stylesheet" href="../../public/css/skindetail.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="../../public/css/caroussel.css">
     </head>
     <body>
         <%- include('../components/header') %>
 
         <main>
-            <div class="ctn-product">
-                <div class="ctn-img">
-                    <!-- Caroussel -->
-
+            <div class="container">
+                <div class="swiper-container">
                     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="../../public/img/base.png" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <img src="../../public/img/idle.png" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                            <img src="../../public/img/inspect.png" />
                           </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -52,82 +31,38 @@
                       <div thumbsSlider="" class="swiper mySwiper">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="../../public/img/base.png" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <img src="../../public/img/idle.png" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                            <img src="../../public/img/inspect.png" />
                           </div>
                         </div>
                       </div>
-
-
-
-                      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-                      <script>
-                        var swiper = new Swiper(".mySwiper", {
-                          loop: true,
-                          spaceBetween: 10,
-                          slidesPerView: 4,
-                          freeMode: true,
-                          watchSlidesProgress: true,
-                        });
-                        var swiper2 = new Swiper(".mySwiper2", {
-                          loop: true,
-                          spaceBetween: 10,
-                          navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                          },
-                          thumbs: {
-                            swiper: swiper,
-                          },
-                        });
-                      </script>
-
-
-                    <!-- Fin Caroussel -->
                 </div>
                 <div class="ctn-description">
                     <div class="name-product">Name</div>
-                    <div class="description">description</div>
+                    <div class="description">Le skin de l'Ares de Valorant, un fusil mitrailleur, se décline en plusieurs thèmes esthétiques spectaculaires qui transforment son apparence de base en œuvres d'art. Parmi les variantes, le skin Prime Ares arbore un design futuriste doré et blanc, rappelant un arsenal hi-tech de luxe. Le Forsaken Ares présente un style sombre et mystique avec des motifs verts lumineux, tandis que le skin Singularity offre un look cosmique avec des effets de lumière dynamiques. Ces skins ne modifient pas la performance mais offrent une expérience visuelle enrichie.</div>
+                    <div class="price">
+                        <div class="txt_price">Price</div>
+                        <div class="nb_price">30,00€</div>
+                    </div>
                     <div class="btn-cart">ajouter au panier</div>
                 </div>
             </div>
-            <div class="ctn-sugest">
-                <div class="sugest-prod">
-                    <img src="" alt="" />
-                    <div class="sugest-name">name product</div>
-                    <div class="sugest-price">prix</div>
-                </div>
+            <div class="ctn-suggest">
+                <%- include('../components/suggest') %>
             </div>
         </main>
 
-        <footer></footer>
+        <footer>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="../../public/js/caroussel.js"></script>
+
     </body>
 </html>

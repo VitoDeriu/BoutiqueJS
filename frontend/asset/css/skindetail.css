@@ -8,7 +8,7 @@ main{
 
 .ctn-product{
     margin: 20px;
-    background-color: blue;
+    background-color: rgb(159, 159, 159)    ;
     width: 80vw;
     height: 70vh;
     display: flex;
@@ -19,44 +19,65 @@ main{
 .ctn-img{
     background-color: yellow;
     display: flex;
+    flex-direction: column;
     width: 60%;
     height: 90%;
 }
 
 .ctn-description{
-    background-color: green;
+    background-color: rgb(159, 159, 159);
     display: flex;
-    width: 35%;
-    height: 90%;
+    flex-direction: column;
 }
 
 .name-product{
-
+    height: 15%;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    padding: 15px;
 }
 
 .description{
+    height: 55%;
+    padding: 30px;
+}
 
+.price{
+    height: 15%;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
 }
 
 .btn-cart{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
 
 }
 
-.ctn-sugest{
-    background-color: aqua;
+.ctn-suggest{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:aqua;
     width: 80vw;
-    height: 40vh;
+    height: 30vh;
     margin-bottom: 20px;
 }
 
 .sugest-prod{
-
-}
-
-.sugest-name{
-
-}
-
-.sugest-price{
-
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    margin: 10px;
+    height: 90%;
+    width: 400px;
 }

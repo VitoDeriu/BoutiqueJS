@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../components/head') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valogear</title>
+    <link rel="stylesheet" href="../../public/css/armes.css">
+</head>
+<body>
+    <%- include('../components/header') %>
+    <div class="container">
+        <% armes.forEach(function(arme){ %>
+        <a href="/armesdetail?id=<%- arme.id_arme %>">
+           <div class="ctn-arme">
+                <div class="titre-arme">
+                    <%- arme.name_arme %>
+                </div>
+                <div class="image-arme">
+                    <img src="" alt="image de <%- arme.name_arme %>">
+                </div>
+            </div>
+        </a>
+        <% }); %>
+    </div>
+</body>
+</html>

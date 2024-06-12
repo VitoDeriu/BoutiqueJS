@@ -1,6 +1,4 @@
-const baseUrl = ''
-
-exports.Index = (req, res) => {
+    exports.Index = (req, res) => {
     res.render("../views/temps/index");
     // document.addEventListener("DOMContentLoaded", getSkins);
 };
@@ -8,6 +6,28 @@ exports.Index = (req, res) => {
 exports.SkinDetail = (req, res) => {
     res.render("../views/temps/skindetail");
 };
+
+exports.Armes = (req, res) => {
+    GetArmes().then(armes => {
+        console.log("arme : ", armes)
+        res.render('../views/temps/armes', {armes});
+    })    
+    .catch(error => {
+        console.log("error : " + error);
+    });
+}
+
+
+
+async function GetArmes(){
+    try {
+        const data = await fetch('http://localhost:4000/armes');
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
+};
+
 
 
 

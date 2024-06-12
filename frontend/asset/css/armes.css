@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: red;
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ctn-arme{
+    background-color: beige;
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
