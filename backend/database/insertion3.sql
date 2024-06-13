@@ -484,6 +484,22 @@ VALUES
         ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - purple', 6, 30),
         ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - pink', 6, 31),
         ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - green', 6, 32),
+        ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - base', 7, 33),
+        ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - blue', 7, 34),
+        ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - green', 7, 35),
+        ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - white', 7, 36),
+        ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - base', 7, 49),
+        ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - blue', 7, 50),
+        ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - red', 7, 51),
+        ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - yellow', 7, 52),
+        ('Reaver Spectre', 2000, NULL, 'Spectre de la collection Reaver - base', 8, 41),
+        ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - black', 6, 42),
+        ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - red', 6, 43),
+        ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - white', 6, 44),
+        ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - base', 6, 29),
+        ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - purple', 6, 30),
+        ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - pink', 6, 31),
+        ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - green', 6, 32),
         
         
         #Stinger

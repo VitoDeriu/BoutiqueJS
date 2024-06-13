@@ -33,7 +33,7 @@ class ModelsTest {
 
     static GetSkin() {
         return new Promise ((resolve, reject) => {
-            const sqlRequest = 'SELECT * FROM skin';
+            const sqlRequest = 'SELECT * FROM skins';
             sql.query(sqlRequest, (err, data) => {
                 if (err) {
                     reject(err);
@@ -46,7 +46,84 @@ class ModelsTest {
 
     static GetSkinId(id) {
         return new Promise ((resolve, reject) => {
-            let sqlRequest = sql.format('SELECT * FROM skin WHERE skins.id_skin = ?', [id]);
+            let sqlRequest = sql.format('SELECT * FROM skins WHERE skins.id_skin = ?', [id]);
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
+
+    static GetImage() {
+        return new Promise ((resolve, reject) => {
+            const sqlRequest = 'SELECT * FROM images';
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(data)
+            })
+        })
+    }
+
+    static GetImageId(id) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format('SELECT * FROM images WHERE images.id_image = ?', [id]);
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
+
+    static GetVariante() {
+        return new Promise ((resolve, reject) => {
+            const sqlRequest = 'SELECT * FROM variantes';
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(data)
+            })
+        })
+    }
+
+    static GetVarianteId(id) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format('SELECT * FROM variantes WHERE variantes.id_variante = ?', [id]);
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
+
+    static GetArmesTypeId(id) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format('SELECT * FROM armes WHERE armes.id_type = ?', [id]);
             sql.query(sqlRequest, (err, data) => {
                 if (err) {
                     reject(err);
