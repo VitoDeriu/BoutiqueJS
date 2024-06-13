@@ -397,18 +397,25 @@ VALUES (1, 1),
 
 #insertion des differents skins
 INSERT INTO skins (name_skin, prix, reduction, description_skin, rarete, id_variante)
-VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base', 1, 1),
+VALUES  
+        #Knifes
+        ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base', 1, 1),
         ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - black', 1, 2),
         ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - purple', 1, 3),
         ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - white', 1, 4),
+        
         ('Ion Knife', 2000, NULL, 'Gantelet de la collection Ion - base', 1, 5),
         ('Ion Knife', 2000, NULL, 'Gantelet de la collection Ion - blue', 1, 6),
         ('Ion Knife', 2000, NULL, 'Gantelet de la collection Ion - green', 1, 7),
         ('Ion Knife', 2000, NULL, 'Gantelet de la collection Ion - orange', 1, 8),
+        
         ('Oni Knife', 2000, NULL, 'Katana de la collection Oni - base', 1, 9),
         ('Oni Knife', 2000, NULL, 'Katana de la collection Oni - black', 1, 10),
         ('Oni Knife', 2000, NULL, 'Katana de la collection Oni - green', 1, 11),
         ('Oni Knife', 2000, NULL, 'Katana de la collection Oni - white', 1, 12),
+        
+        
+        #Classic
         ('Glitchpop Classic', 2000, NULL, 'Classic de la collection Glitchpop - base', 2, 13),
         ('Glitchpop Classic', 2000, NULL, 'Classic de la collection Glitchpop - blue', 2, 14),
         ('Glitchpop Classic', 2000, NULL, 'Classic de la collection Glitchpop - gold', 2, 15),
@@ -421,6 +428,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Spectrum Classic', 2000, NULL, 'Classic de la collection Spectrum - black', 2, 26),
         ('Spectrum Classic', 2000, NULL, 'Classic de la collection Spectrum - purple', 2, 27),
         ('Spectrum Classic', 2000, NULL, 'Classic de la collection Spectrum - red', 2, 28),
+        
+        
+        #Shorty
         ('Oni Shorty', 2000, NULL, 'Shorty de la collection Oni - base', 3, 9),
         ('Oni Shorty', 2000, NULL, 'Shorty de la collection Oni - black', 3, 10),
         ('Oni Shorty', 2000, NULL, 'Shorty de la collection Oni - green', 3, 11),
@@ -433,6 +443,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('PTC Shorty', 2000, NULL, 'Shorty de la collection Prelude to Chaos - blue', 3, 34),
         ('PTC Shorty', 2000, NULL, 'Shorty de la collection Prelude to Chaos - green', 3, 35),
         ('PTC Shorty', 2000, NULL, 'Shorty de la collection Prelude to Chaos - white', 3, 36),
+        
+        
+        #Frenzy
         ('Prime Frenzy', 2000, NULL, 'Frenzy de la collection Prime//2.0 - base', 4, 21),
         ('Prime Frenzy', 2000, NULL, 'Frenzy de la collection Prime//2.0 - blue', 4, 22),
         ('Prime Frenzy', 2000, NULL, 'Frenzy de la collection Prime//2.0 - gold', 4, 23),
@@ -445,6 +458,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Ion Frenzy', 2000, NULL, 'Frenzy de la collection Ion - blue', 4, 6),
         ('Ion Frenzy', 2000, NULL, 'Frenzy de la collection Ion - green', 4, 7),
         ('Ion Frenzy', 2000, NULL, 'Frenzy de la collection Ion - orange', 4, 8),
+        
+        
+        #Ghost
         ('Gaia Ghost', 2000, NULL, 'Ghost de la collection Gaia s vengeance - base', 5, 37),
         ('Gaia Ghost', 2000, NULL, 'Ghost de la collection Gaia s vengeance - blue', 5, 38),
         ('Gaia Ghost', 2000, NULL, 'Ghost de la collection Gaia s vengeance - green', 5, 39),
@@ -456,28 +472,11 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('RES Ghost', 2000, NULL, 'Ghost de la collection Radiant Entertainment System - base', 5, 45),
         ('RES Ghost', 2000, NULL, 'Ghost de la collection Radiant Entertainment System - red', 5, 46),
         ('RES Ghost', 2000, NULL, 'Ghost de la collection Radiant Entertainment System - purple', 5, 47),
+        
+        
+        #Sheriff
         ('Arcane Sheriff', 2000, NULL, 'Sheriff de l edition limitee Arcane - base', 6, 48),
-        ('Ion Sheriff', 2000, NULL, 'Sheriff de la collection Ion - base', 6, 5),
-        ('Ion Sheriff', 2000, NULL, 'Sheriff de la collection Ion - blue', 6, 6),
-        ('Ion Sheriff', 2000, NULL, 'Sheriff de la collection Ion - green', 6, 7),
-        ('Ion Sheriff', 2000, NULL, 'Sheriff de la collection Ion - orange', 6, 8),
         ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - base', 6, 41),
-        ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - black', 6, 42),
-        ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - red', 6, 43),
-        ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - white', 6, 44),
-        ('SOTL Sherill', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - base', 6, 29),
-        ('SOTL Sherill', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - purple', 6, 30),
-        ('SOTL Sherill', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - pink', 6, 31),
-        ('SOTL Sherill', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - green', 6, 32),
-        ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - base', 7, 33),
-        ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - blue', 7, 34),
-        ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - green', 7, 35),
-        ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - white', 7, 36),
-        ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - base', 7, 49),
-        ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - blue', 7, 50),
-        ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - red', 7, 51),
-        ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - yellow', 7, 52),
-        ('Reaver Spectre', 2000, NULL, 'Spectre de la collection Reaver - base', 8, 41),
         ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - black', 6, 42),
         ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - red', 6, 43),
         ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - white', 6, 44),
@@ -485,6 +484,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - purple', 6, 30),
         ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - pink', 6, 31),
         ('SOTL Sheriff', 2000, NULL, 'Sheriff de la collection Sentinel of the Light - green', 6, 32),
+        
+        
+        #Stinger
         ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - base', 7, 33),
         ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - blue', 7, 34),
         ('PTC Stinger', 2000, NULL, 'Stinger de la collection Prelude to Chaos - green', 7, 35),
@@ -493,6 +495,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - blue', 7, 50),
         ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - red', 7, 51),
         ('RGX Stinger', 2000, NULL, 'Stinger de la collection RGX - yellow', 7, 52),
+        
+        
+        #Spectre
         ('Reaver Spectre', 2000, NULL, 'Spectre de la collection Reaver - base', 8, 41),
         ('Reaver Spectre', 2000, NULL, 'Spectre de la collection Reaver - black', 8, 42),
         ('Reaver Spectre', 2000, NULL, 'Spectre de la collection Reaver - red', 8, 43),
@@ -509,6 +514,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Prime Spectre', 2000, NULL, 'Spectre de la collection Prime - blue', 8, 18),
         ('Prime Spectre', 2000, NULL, 'Spectre de la collection Prime - orange', 8, 19),
         ('Prime Spectre', 2000, NULL, 'Spectre de la collection Prime - yellow', 8, 20),
+        
+        
+        #Bucky
         ('Oni Bucky', 2000, NULL, 'Bucky de la collection Oni - base', 9, 9),
         ('Oni Bucky', 2000, NULL, 'Bucky de la collection Oni - black', 9, 10),
         ('Oni Bucky', 2000, NULL, 'Bucky de la collection Oni - green', 9, 11),
@@ -521,6 +529,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Prime Bucky', 2000, NULL, 'Bucky de la collection Prime - blue', 9, 22),
         ('Prime Bucky', 2000, NULL, 'Bucky de la collection Prime - orange', 9, 23),
         ('Prime Bucky', 2000, NULL, 'Bucky de la collection Prime - yellow', 9, 24),
+        
+        
+        #Judge
         ('Glitchpop Judge', 2000, NULL, 'Judge de la collection Glitchpop - base', 10, 13),
         ('Glitchpop Judge', 2000, NULL, 'Judge de la collection Glitchpop - blue', 10, 14),
         ('Glitchpop Judge', 2000, NULL, 'Judge de la collection Glitchpop - gold', 10, 15),
@@ -530,6 +541,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Elderflame Judge', 2000, NULL, 'Judge de la collection Elderflame - blue', 10, 59),
         ('Elderflame Judge', 2000, NULL, 'Judge de la collection Elderflame - red', 10, 60),
         ('Convex Judge', 2000, NULL, 'Judge de la collection Convex - base', 10, 61),
+        
+        
+        #Bulldog
         ('RES Bulldog', 2000, NULL, 'Bulldog de la collection Radiant Entertainment System - base', 11, 45),
         ('RES Bulldog', 2000, NULL, 'Bulldog de la collection Radiant Entertainment System - red', 11, 46),
         ('RES Bulldog', 2000, NULL, 'Bulldog de la collection Radiant Entertainment System - purple', 11, 47),
@@ -541,6 +555,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Spectrum Bulldog', 2000, NULL, 'Bulldog de la collection Spectrum - black', 11, 26),
         ('Spectrum Bulldog', 2000, NULL, 'Bulldog de la collection Spectrum - purple', 11, 27),
         ('Spectrum Bulldog', 2000, NULL, 'Bulldog de la collection Spectrum - red', 11, 28),
+        
+        
+        #Guardian
         ('Gaia Guardian', 2000, NULL, 'Guardian de la collection Gaia s vengeance - base', 12, 37),
         ('Gaia Guardian', 2000, NULL, 'Guardian de la collection Gaia s vengeance - blue', 12, 38),
         ('Gaia Guardian', 2000, NULL, 'Guardian de la collection Gaia s vengeance - green', 12, 39),
@@ -553,6 +570,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Reaver Guardian', 2000, NULL, 'Guardian de la collection Reaver - black', 12, 42),
         ('Reaver Guardian', 2000, NULL, 'Guardian de la collection Reaver - red', 12, 43),
         ('Reaver Guardian', 2000, NULL, 'Guardian de la collection Reaver - white', 12, 44),
+        
+        
+        #Phantom
         ('Champion22 Phantom', 2000, NULL, 'Phantom de la collection Champion 22', 13, 63),
         ('Glitchpop Phantom', 2000, NULL, 'Phantom de la collection Glitchpop - base', 13, 13),
         ('Glitchpop Phantom', 2000, NULL, 'Phantom de la collection Glitchpop - blue', 13, 14),
@@ -569,6 +589,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('RES Phantom', 2000, NULL, 'Phantom de la collection Radiant Entertainment System - base', 13, 45),
         ('RES Phantom', 2000, NULL, 'Phantom de la collection Radiant Entertainment System - red', 13, 46),
         ('RES Phantom', 2000, NULL, 'Phantom de la collection Radiant Entertainment System - purple', 13, 47),
+        
+        
+        #Vandal
         ('Champion21 Vandal', 2000, NULL, 'Vandal de la collection Champion 21', 13, 62),
         ('Champion23 Vandal', 2000, NULL, 'Vandal de la collection Champion 23', 13, 64),
         ('Gaia Vandal', 2000, NULL, 'Vandal de la collection Gaia s vengeance - base', 13, 37),
@@ -587,6 +610,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('PTC Vandal', 2000, NULL, 'Vandal de la collection Prelude to Chaos - blue', 13, 34),
         ('PTC Vandal', 2000, NULL, 'Vandal de la collection Prelude to Chaos - green', 13, 35),
         ('PTC Vandal', 2000, NULL, 'Vandal de la collection Prelude to Chaos - white', 13, 36),
+        
+        
+        #Marshall
         ('Gaia Marshall', 2000, NULL, 'Marshall de la collection Gaia s vengeance - base', 14, 37),
         ('Gaia Marshall', 2000, NULL, 'Marshall de la collection Gaia s vengeance - blue', 14, 38),
         ('Gaia Marshall', 2000, NULL, 'Marshall de la collection Gaia s vengeance - green', 14, 39),
@@ -595,6 +621,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Magepunk Marshall', 2000, NULL, 'Marshall de la collection Magepunk - green', 14, 54),
         ('Magepunk Marshall', 2000, NULL, 'Marshall de la collection Magepunk - purple', 14, 55),
         ('Magepunk Marshall', 2000, NULL, 'Marshall de la collection Magepunk - yellow', 14, 56),
+        
+        
+        #Operator
         ('Reaver Operator', 2000, NULL, 'Operator de la collection Reaver - base', 15, 41),
         ('Reaver Operator', 2000, NULL, 'Operator de la collection Reaver - black', 15, 42),
         ('Reaver Operator', 2000, NULL, 'Operator de la collection Reaver - red', 15, 43),
@@ -606,6 +635,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('RES Operator', 2000, NULL, 'Operator de la collection Radiant Entertainment System - base', 15, 45),
         ('RES Operator', 2000, NULL, 'Operator de la collection Radiant Entertainment System - red', 15, 46),
         ('RES Operator', 2000, NULL, 'Operator de la collection Radiant Entertainment System - purple', 15, 47),
+        
+        
+        #Ares
         ('SOTL Ares', 2000, NULL, 'Ares de la collection Sentinel of the Light - base', 16, 29),
         ('SOTL Ares', 2000, NULL, 'Ares de la collection Sentinel of the Light - purple', 16, 30),
         ('SOTL Ares', 2000, NULL, 'Ares de la collection Sentinel of the Light - pink', 16, 31),
@@ -618,6 +650,9 @@ VALUES  ('Kuronami Knife', 2000, NULL, 'couteau de la collection Kuronami - base
         ('Oni Ares', 2000, NULL, 'Ares de la collection Oni - black', 16, 10),
         ('Oni Ares', 2000, NULL, 'Ares de la collection Oni - green', 16, 11),
         ('Oni Ares', 2000, NULL, 'Ares de la collection Oni - white', 16, 12),
+        
+        
+        #Odin
         ('Prime Odin', 2000, NULL, 'Odin de la collection Prime - base', 17, 17),
         ('Prime Odin', 2000, NULL, 'Odin de la collection Prime - blue', 17, 18),
         ('Prime Odin', 2000, NULL, 'Odin de la collection Prime - orange', 17, 19),
@@ -656,7 +691,10 @@ VALUES ('Kuronami'),
 
 #insertion des images
 INSERT INTO images (path, alt, id_skin)
-VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collection Kuronami - base', 1),
+VALUES 
+#base
+#Knife
+('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collection Kuronami - base', 1),
 ('/knife/kuronami/kuronami_knife_black/base.png', 'couteau de la collection Kuronami - black', 2),
 ('/knife/kuronami/kuronami_knife_purple/base.png', 'couteau de la collection Kuronami - purple', 3),
 ('/knife/kuronami/kuronami_knife_white/base.png', 'couteau de la collection Kuronami - white', 4),
@@ -668,6 +706,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/knife/oni/oni_knife_black/base.png', 'Katana de la collection Oni - black', 10),
 ('/knife/oni/oni_knife_green/base.png', 'Katana de la collection Oni - green', 11),
 ('/knife/oni/oni_knife_white/base.png', 'Katana de la collection Oni - white', 12),
+
+#Classic
 ('/classic/glitchpop/glitchpop_classic_base/base.png', 'Classic de la collection Glitchpop - base', 13),
 ('/classic/glitchpop/glitchpop_classic_blue/base.png', 'Classic de la collection Glitchpop - blue', 14),
 ('/classic/glitchpop/glitchpop_classic_gold/base.png', 'Classic de la collection Glitchpop - gold', 15),
@@ -680,6 +720,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/classic/spectrum/spectrum_classic_black/base.png', 'Classic de la collection Spectrum - black', 22),
 ('/classic/spectrum/spectrum_classic_purple/base.png', 'Classic de la collection Spectrum - purple', 23),
 ('/classic/spectrum/spectrum_classic_red/base.png', 'Classic de la collection Spectrum - red', 24),
+
+#Shorty
 ('/shorty/oni/oni_shorty_base/base.png', 'Shorty de la collection Oni - base', 25),
 ('/shorty/oni/oni_shorty_black/base.png', 'Shorty de la collection Oni - black', 26),
 ('/shorty/oni/oni_shorty_green/base.png', 'Shorty de la collection Oni - green', 27),
@@ -692,6 +734,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/shorty/ptc/ptc_shorty_blue/base.png', 'Shorty de la collection Prelude to Chaos - blue', 34),
 ('/shorty/ptc/ptc_shorty_green/base.png', 'Shorty de la collection Prelude to Chaos - green', 35),
 ('/shorty/ptc/ptc_shorty_white/base.png', 'Shorty de la collection Prelude to Chaos - white', 36),
+
+#Frenzy
 ('/frenzy/prime/prime_frenzy_base/base.png', 'Frenzy de la collection Prime//2.0 - base', 37),
 ('/frenzy/prime/prime_frenzy_blue/base.png', 'Frenzy de la collection Prime//2.0 - blue', 38),
 ('/frenzy/prime/prime_frenzy_gold/base.png', 'Frenzy de la collection Prime//2.0 - gold', 39),
@@ -704,6 +748,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/frenzy/ion/ion_frenzy_blue/base.png', 'Frenzy de la collection Ion - blue', 46),
 ('/frenzy/ion/ion_frenzy_green/base.png', 'Frenzy de la collection Ion - green', 47),
 ('/frenzy/ion/ion_frenzy_orange/base.png', 'Frenzy de la collection Ion - orange', 48),
+
+#Ghost
 ('/ghost/gaia/gaia_ghost_base/base.png', 'Ghost de la collection Gaia s vengeance - base', 49),
 ('/ghost/gaia/gaia_ghost_blue/base.png', 'Ghost de la collection Gaia s vengeance - blue', 50),
 ('/ghost/gaia/gaia_ghost_green/base.png', 'Ghost de la collection Gaia s vengeance - green', 51),
@@ -715,6 +761,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/ghost/res/res_ghost_base/base.png', 'Ghost de la collection Radiant Entertainment System', 57),
 ('/ghost/res/res_ghost_purple/base.png', 'Ghost de la collection Radiant Entertainment System', 58),
 ('/ghost/res/res_ghost_red/base.png', 'Ghost de la collection Radiant Entertainment System', 59),
+
+#Sheriff
 ('/sheriff/arcane/arcane_sheriff_base/base.png', 'Sheriff de l edition limitee Arcane', 60),
 ('/sheriff/reaver/reaver_sheriff_base/base.png', 'Sheriff de la collection Reaver', 61),
 ('/sheriff/reaver/reaver_sheriff_black/base.png', 'Sheriff de la collection Reaver', 62),
@@ -724,6 +772,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/sheriff/sotl/sotl_sheriff_green/base.png', 'Sheriff de la collection Sentinel of the Light', 66),
 ('/sheriff/sotl/sotl_sheriff_pink/base.png', 'Sheriff de la collection Sentinel of the Light', 67),
 ('/sheriff/sotl/sotl_sheriff_purple/base.png', 'Sheriff de la collection Sentinel of the Light', 68),
+
+#Stinger
 ('/stinger/ptc/ptc_stinger_base/base.png', 'Stinger de la collection Prelude to Chaos', 69),
 ('/stinger/ptc/ptc_stinger_blue/base.png', 'Stinger de la collection Prelude to Chaos', 70),
 ('/stinger/ptc/ptc_stinger_green/base.png', 'Stinger de la collection Prelude to Chaos', 71),
@@ -732,51 +782,85 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/stinger/rgx/rgx_stinger_blue/base.png', 'Stinger de la collection RGX11Z', 74),
 ('/stinger/rgx/rgx_stinger_red/base.png', 'Stinger de la collection RGX11Z', 75),
 ('/stinger/rgx/rgx_stinger_yellow/base.png', 'Stinger de la collection RGX11Z', 76),
-('/stinger/regen/regen_stinger_base/base.png', 'Stinger de la collection Reaver', 77),
-('/stinger/regen/regen_stinger_black/base.png', 'Stinger de la collection Reaver', 78),
-('/stinger/regen/regen_stinger_red/base.png', 'Stinger de la collection Reaver', 79),
-('/stinger/regen/regen_stinger_white/base.png', 'Stinger de la collection Reaver', 80),
-('/stinger/spectrum/spectrum_stinger_base/base.png', 'Stinger de la collection Spectrum', 81),
-('/stinger/spectrum/spectrum_stinger_black/base.png', 'Stinger de la collection Spectrum', 82),
-('/stinger/spectrum/spectrum_stinger_purple/base.png', 'Stinger de la collection Spectrum', 83),
-('/stinger/spectrum/spectrum_stinger_red/base.png', 'Stinger de la collection Spectrum', 84),
-('/bulldog/glitchpop/glitchpop_bulldog_base/base.png', 'Bulldog de la collection Glitchpop', 85),
-('/bulldog/glitchpop/glitchpop_bulldog_blue/base.png', 'Bulldog de la collection Glitchpop', 86),
-('/bulldog/glitchpop/glitchpop_bulldog_gold/base.png', 'Bulldog de la collection Glitchpop', 87),
-('/bulldog/glitchpop/glitchpop_bulldog_red/base.png', 'Bulldog de la collection Glitchpop', 88),
-('/bulldog/magepunk/magepunk_bulldog_base/base.png', 'Bulldog de la collection Magepunk', 89),
-('/bulldog/magepunk/magepunk_bulldog_green/base.png', 'Bulldog de la collection Magepunk', 90),
-('/bulldog/magepunk/magepunk_bulldog_orange/base.png', 'Bulldog de la collection Magepunk', 91),
-('/bulldog/magepunk/magepunk_bulldog_purple/base.png', 'Bulldog de la collection Magepunk', 92),
-('/guardian/gaia/gaia_guardian_base/base.png', 'Guardian de la collection Gaia s vengeance', 93),
-('/guardian/gaia/gaia_guardian_blue/base.png', 'Guardian de la collection Gaia s vengeance', 94),
-('/guardian/gaia/gaia_guardian_green/base.png', 'Guardian de la collection Gaia s vengeance', 95),
-('/guardian/gaia/gaia_guardian_red/base.png', 'Guardian de la collection Gaia s vengeance', 96),
-('/guardian/protocol/protocol_guardian_base/base.png', 'Guardian de la collection Protocol', 97),
-('/guardian/protocol/protocol_guardian_blue/base.png', 'Guardian de la collection Protocol', 98),
-('/guardian/protocol/protocol_guardian_orange/base.png', 'Guardian de la collection Protocol', 99),
-('/guardian/protocol/protocol_guardian_red/base.png', 'Guardian de la collection Protocol', 100),
-('/vandal/chronovoid/chronovoid_vandal_base/base.png', 'Vandal de la collection Chronovoid', 101),
-('/vandal/chronovoid/chronovoid_vandal_black/base.png', 'Vandal de la collection Chronovoid', 102),
-('/vandal/chronovoid/chronovoid_vandal_purple/base.png', 'Vandal de la collection Chronovoid', 103),
-('/vandal/chronovoid/chronovoid_vandal_red/base.png', 'Vandal de la collection Chronovoid', 104),
-('/vandal/glitchpop/glitchpop_vandal_base/base.png', 'Vandal de la collection Glitchpop', 105),
-('/vandal/glitchpop/glitchpop_vandal_blue/base.png', 'Vandal de la collection Glitchpop', 106),
-('/vandal/glitchpop/glitchpop_vandal_gold/base.png', 'Vandal de la collection Glitchpop', 107),
-('/vandal/glitchpop/glitchpop_vandal_red/base.png', 'Vandal de la collection Glitchpop', 108),
-('/vandal/prime/prime_vandal_base/base.png', 'Vandal de la collection Prime', 109),
-('/vandal/prime/prime_vandal_blue/base.png', 'Vandal de la collection Prime', 110),
-('/vandal/prime/prime_vandal_gold/base.png', 'Vandal de la collection Prime', 111),
-('/vandal/prime/prime_vandal_red/base.png', 'Vandal de la collection Prime', 112),
-('/vandal/rgx/rgx_vandal_base/base.png', 'Vandal de la collection RGX11Z', 113),
-('/vandal/rgx/rgx_vandal_blue/base.png', 'Vandal de la collection RGX11Z', 114),
-('/vandal/rgx/rgx_vandal_red/base.png', 'Vandal de la collection RGX11Z', 115),
-('/vandal/rgx/rgx_vandal_yellow/base.png', 'Vandal de la collection RGX11Z', 116),
-('/vandal/reaver/reaver_vandal_base/base.png', 'Vandal de la collection Reaver', 117),
-('/vandal/reaver/reaver_vandal_black/base.png', 'Vandal de la collection Reaver', 118),
-('/vandal/reaver/reaver_vandal_red/base.png', 'Vandal de la collection Reaver', 119),
-('/vandal/reaver/reaver_vandal_white/base.png', 'Vandal de la collection Reaver', 120),
-('/phantom/champions/champions_phantom_base/base.png', 'Phantom de la collection Champions', 121),
+
+#Spectre
+('/spectre/reaver/reaver_spectre_base/base.png', 'Spectre de la collection reaver - base', 77),
+('/spectre/reaver/reaver_spectre_black/base.png', 'Spectre de la collection reaver - black', 78),
+('/spectre/reaver/reaver_spectre_red/base.png', 'Spectre de la collection reaver - red', 79),
+('/spectre/reaver/reaver_spectre_white/base.png', 'Spectre de la collection reaver - white', 80),
+
+('/spectre/magepunk/magepunk_spectre_base/base.png', 'Spectre de la collection Magepunk - base', 81),
+('/spectre/magepunk/magepunk_spectre_green/base.png', 'Spectre de la collection Magepunk - green', 82),
+('/spectre/magepunk/magepunk_spectre_purple/base.png', 'Spectre de la collection Magepunk - purple', 83),
+('/spectre/magepunk/magepunk_spectre_yellow/base.png', 'Spectre de la collection Magepunk - yellow', 84),
+
+('/spectre/kuronami/kuronami_spectre_base/base.png', 'Spectre de la collection Kuronami - base', 85),
+('/spectre/kuronami/kuronami_spectre_black/base.png', 'Spectre de la collection Kuronami - black', 86),
+('/spectre/kuronami/kuronami_spectre_purple/base.png', 'Spectre de la collection Kuronami - purple', 87),
+('/spectre/kuronami/kuronami_spectre_white/base.png', 'Spectre de la collection Kuronami - white', 88),
+
+('/spectre/prime/prime_spectre_base/base.png', 'Spectre de la collection prime - base', 89),
+('/spectre/prime/prime_spectre_blue/base.png', 'Spectre de la collection prime - blue', 90),
+('/spectre/prime/prime_spectre_orange/base.png', 'Spectre de la collection prime - orange', 91),
+('/spectre/prime/prime_spectre_yellow/base.png', 'Spectre de la collection prime - yellow', 92),
+
+
+#Bulldog
+('/bulldog/res/res_bulldog_base/base.png', 'Bulldog de la collection Radiant Entertainment System - base', 77),
+('/bulldog/res/res_bulldog_red/base.png', 'Bulldog de la collection Radiant Entertainment System - red', 78),
+('/bulldog/res/res_bulldog_purple/base.png', 'Bulldog de la collection Radiant Entertainment System - purple', 79),
+('/bulldog/oni/oni_bulldog_base/base.png', 'Bulldog de la collection oni - base', 80),
+('/bulldog/oni/oni_bulldog_black/base.png', 'Bulldog de la collection oni - black', 81),
+('/bulldog/oni/oni_bulldog_green/base.png', 'Bulldog de la collection oni - green', 82),
+('/bulldog/oni/oni_bulldog_white/base.png', 'Bulldog de la collection oni - white', 83),
+('/bulldog/spectrum/spectrum_bulldog_base/base.png', 'Bulldog de la collection spectrum - base', 84),
+('/bulldog/spectrum/spectrum_bulldog_black/base.png', 'Bulldog de la collection spectrum - black', 85),
+('/bulldog/spectrum/spectrum_bulldog_purple/base.png', 'Bulldog de la collection spectrum - purple', 86),
+('/bulldog/spectrum/spectrum_bulldog_red/base.png', 'Bulldog de la collection spectrum - red', 87),
+
+#Guardian
+('/guardian/gaia/gaia_guardian_base/base.png', 'Guardian de la collection Gaia s vengeance - base', 93),
+('/guardian/gaia/gaia_guardian_blue/base.png', 'Guardian de la collection Gaia s vengeance - blue', 94),
+('/guardian/gaia/gaia_guardian_green/base.png', 'Guardian de la collection Gaia s vengeance - green', 95),
+('/guardian/gaia/gaia_guardian_red/base.png', 'Guardian de la collection Gaia s vengeance - red', 96),
+
+('/guardian/prime/prime_guardian_base/base.png', 'Guardian de la collection Gaia s vengeance - base', 97),
+('/guardian/prime/prime_guardian_blue/base.png', 'Guardian de la collection Gaia s vengeance - blue', 98),
+('/guardian/prime/prime_guardian_orange/base.png', 'Guardian de la collection Gaia s vengeance - orange', 99),
+('/guardian/prime/prime_guardian_yellow/base.png', 'Guardian de la collection Gaia s vengeance - yellow', 100),
+
+('/guardian/reaver/reaver_guardian_base/base.png', 'Guardian de la collection Reaver - base', 97),
+('/guardian/reaver/reaver_guardian_black/base.png', 'Guardian de la collection Reaver - black', 98),
+('/guardian/reaver/reaver_guardian_red/base.png', 'Guardian de la collection Protocol - red', 99),
+('/guardian/reaver/reaver_guardian_white/base.png', 'Guardian de la collection Protocol - white', 100),
+
+#Vandal
+('/vandal/champion21/champion21_vandal_base/base.png', 'Vandal Champion 21', 101),
+
+('/vandal/champion23/champion23_vandal_base/base.png', 'Vandal Champion 23', 102),
+
+('/vandal/gaia/gaia_vandal_base/base.png', 'Vandal de la collection Gaia s vengeance - base', 103),
+('/vandal/gaia/gaia_vandal_blue/base.png', 'Vandal de la collection Gaia s vengeance - blue', 104),
+('/vandal/gaia/gaia_vandal_green/base.png', 'Vandal de la collection Gaia s vengeance - green', 105),
+('/vandal/gaia/gaia_vandal_orange/base.png', 'Vandal de la collection Gaia s vengeance - orange', 106),
+
+('/vandal/ion/ion_vandal_base/base.png', 'Vandal de la collection ion - base', 107),
+('/vandal/ion/ion_vandal_blue/base.png', 'Vandal de la collection ion - blue', 108),
+('/vandal/ion/ion_vandal_green/base.png', 'Vandal de la collection ion - green', 109),
+('/vandal/ion/ion_vandal_yellow/base.png', 'Vandal de la collection ion - yellow', 110),
+
+('/vandal/magepunk/magepunk_vandal_base/base.png', 'Vandal de la collection magepunk - base', 111),
+('/vandal/magepunk/magepunk_vandal_black/base.png', 'Vandal de la collection magepunk - black', 112),
+('/vandal/magepunk/magepunk_vandal_green/base.png', 'Vandal de la collection magepunk - green', 113),
+('/vandal/magepunk/magepunk_vandal_yellow/base.png', 'Vandal de la collection magepunk - yellow', 114),
+
+('/vandal/ptc/ptc_vandal_base/base.png', 'Vandal de la collection ptc - base', 115),
+('/vandal/ptc/ptc_vandal_blue/base.png', 'Vandal de la collection ptc - blue', 116),
+('/vandal/ptc/ptc_vandal_green/base.png', 'Vandal de la collection ptc - green', 117),
+('/vandal/ptc/ptc_vandal_white/base.png', 'Vandal de la collection ptc - white', 118),
+
+#Phantom
+('/phantom/champion22/champion22_phantom_base/base.png', 'Phantom de la collection Champion 2022', 119),
 ('/phantom/glitchpop/glitchpop_phantom_base/base.png', 'Phantom de la collection Glitchpop', 122),
 ('/phantom/glitchpop/glitchpop_phantom_blue/base.png', 'Phantom de la collection Glitchpop', 123),
 ('/phantom/glitchpop/glitchpop_phantom_gold/base.png', 'Phantom de la collection Glitchpop', 124),
@@ -802,6 +886,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/phantom/smorgasbord/smorgasbord_phantom_purple/base.png', 'Phantom de la collection Smorgasbord', 144),
 ('/phantom/smorgasbord/smorgasbord_phantom_red/base.png', 'Phantom de la collection Smorgasbord', 145),
 ('/phantom/smorgasbord/smorgasbord_phantom_yellow/base.png', 'Phantom de la collection Smorgasbord', 146),
+
+#Operator
 ('/operator/ion/ion_operator_base/base.png', 'Operator de la collection Ion', 147),
 ('/operator/ion/ion_operator_blue/base.png', 'Operator de la collection Ion', 148),
 ('/operator/ion/ion_operator_green/base.png', 'Operator de la collection Ion', 149),
@@ -831,7 +917,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/operator/lycan/lycan_operator_green/base.png', 'Operator de la collection Lycan s Bane', 173),
 ('/operator/lycan/lycan_operator_purple/base.png', 'Operator de la collection Lycan s Bane', 174),
 
-
+#idle
+#knife
 ('/knife/kuronami/kuronami_knife_base/idle.png', 'couteau de la collection Kuronami - base', 1),
 ('/knife/kuronami/kuronami_knife_black/idle.png', 'couteau de la collection Kuronami - black', 2),
 ('/knife/kuronami/kuronami_knife_purple/idle.png', 'couteau de la collection Kuronami - purple', 3),
@@ -844,6 +931,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/knife/oni/oni_knife_black/idle.png', 'Katana de la collection Oni - black', 10),
 ('/knife/oni/oni_knife_green/idle.png', 'Katana de la collection Oni - green', 11),
 ('/knife/oni/oni_knife_white/idle.png', 'Katana de la collection Oni - white', 12),
+
+#classic
 ('/classic/glitchpop/glitchpop_classic_base/idle.png', 'Classic de la collection Glitchpop - base', 13),
 ('/classic/glitchpop/glitchpop_classic_blue/idle.png', 'Classic de la collection Glitchpop - blue', 14),
 ('/classic/glitchpop/glitchpop_classic_gold/idle.png', 'Classic de la collection Glitchpop - gold', 15),
@@ -856,6 +945,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/classic/spectrum/spectrum_classic_black/idle.png', 'Classic de la collection Spectrum - black', 22),
 ('/classic/spectrum/spectrum_classic_purple/idle.png', 'Classic de la collection Spectrum - purple', 23),
 ('/classic/spectrum/spectrum_classic_red/idle.png', 'Classic de la collection Spectrum - red', 24),
+
+#shorty
 ('/shorty/oni/oni_shorty_base/idle.png', 'Shorty de la collection Oni - base', 25),
 ('/shorty/oni/oni_shorty_black/idle.png', 'Shorty de la collection Oni - black', 26),
 ('/shorty/oni/oni_shorty_green/idle.png', 'Shorty de la collection Oni - green', 27),
@@ -868,6 +959,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/shorty/ptc/ptc_shorty_blue/idle.png', 'Shorty de la collection Prelude to Chaos - blue', 34),
 ('/shorty/ptc/ptc_shorty_green/idle.png', 'Shorty de la collection Prelude to Chaos - green', 35),
 ('/shorty/ptc/ptc_shorty_white/idle.png', 'Shorty de la collection Prelude to Chaos - white', 36),
+
+#frenzy
 ('/frenzy/prime/prime_frenzy_base/idle.png', 'Frenzy de la collection Prime//2.0 - base', 37),
 ('/frenzy/prime/prime_frenzy_blue/idle.png', 'Frenzy de la collection Prime//2.0 - blue', 38),
 ('/frenzy/prime/prime_frenzy_gold/idle.png', 'Frenzy de la collection Prime//2.0 - gold', 39),
@@ -880,6 +973,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/frenzy/ion/ion_frenzy_blue/idle.png', 'Frenzy de la collection Ion - blue', 46),
 ('/frenzy/ion/ion_frenzy_green/idle.png', 'Frenzy de la collection Ion - green', 47),
 ('/frenzy/ion/ion_frenzy_orange/idle.png', 'Frenzy de la collection Ion - orange', 48),
+
+#ghost
 ('/ghost/gaia/gaia_ghost_base/idle.png', 'Ghost de la collection Gaia s vengeance - base', 49),
 ('/ghost/gaia/gaia_ghost_blue/idle.png', 'Ghost de la collection Gaia s vengeance - blue', 50),
 ('/ghost/gaia/gaia_ghost_green/idle.png', 'Ghost de la collection Gaia s vengeance - green', 51),
@@ -891,6 +986,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/ghost/res/res_ghost_base/idle.png', 'Ghost de la collection Radiant Entertainment System', 57),
 ('/ghost/res/res_ghost_purple/idle.png', 'Ghost de la collection Radiant Entertainment System', 58),
 ('/ghost/res/res_ghost_red/idle.png', 'Ghost de la collection Radiant Entertainment System', 59),
+
+#sheriff
 ('/sheriff/arcane/arcane_sheriff_base/idle.png', 'Sheriff de l edition limitee Arcane', 60),
 ('/sheriff/reaver/reaver_sheriff_base/idle.png', 'Sheriff de la collection Reaver', 61),
 ('/sheriff/reaver/reaver_sheriff_black/idle.png', 'Sheriff de la collection Reaver', 62),
@@ -900,6 +997,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/sheriff/sotl/sotl_sheriff_green/idle.png', 'Sheriff de la collection Sentinel of the Light', 66),
 ('/sheriff/sotl/sotl_sheriff_pink/idle.png', 'Sheriff de la collection Sentinel of the Light', 67),
 ('/sheriff/sotl/sotl_sheriff_purple/idle.png', 'Sheriff de la collection Sentinel of the Light', 68),
+
+#stinger
 ('/stinger/ptc/ptc_stinger_base/idle.png', 'Stinger de la collection Prelude to Chaos', 69),
 ('/stinger/ptc/ptc_stinger_blue/idle.png', 'Stinger de la collection Prelude to Chaos', 70),
 ('/stinger/ptc/ptc_stinger_green/idle.png', 'Stinger de la collection Prelude to Chaos', 71),
@@ -916,6 +1015,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/stinger/spectrum/spectrum_stinger_black/idle.png', 'Stinger de la collection Spectrum', 82),
 ('/stinger/spectrum/spectrum_stinger_purple/idle.png', 'Stinger de la collection Spectrum', 83),
 ('/stinger/spectrum/spectrum_stinger_red/idle.png', 'Stinger de la collection Spectrum', 84),
+
+#bulldog
 ('/bulldog/glitchpop/glitchpop_bulldog_base/idle.png', 'Bulldog de la collection Glitchpop', 85),
 ('/bulldog/glitchpop/glitchpop_bulldog_blue/idle.png', 'Bulldog de la collection Glitchpop', 86),
 ('/bulldog/glitchpop/glitchpop_bulldog_gold/idle.png', 'Bulldog de la collection Glitchpop', 87),
@@ -924,6 +1025,8 @@ VALUES ('/knife/kuronami/kuronami_knife_base/base.png', 'couteau de la collectio
 ('/bulldog/magepunk/magepunk_bulldog_green/idle.png', 'Bulldog de la collection Magepunk', 90),
 ('/bulldog/magepunk/magepunk_bulldog_orange/idle.png', 'Bulldog de la collection Magepunk', 91),
 ('/bulldog/magepunk/magepunk_bulldog_purple/idle.png', 'Bulldog de la collection Magepunk', 92),
+
+#guardian
 ('/guardian/gaia/gaia_guardian_base/idle.png', 'Guardian de la collection Gaia s vengeance', 93),
 ('/guardian/gaia/gaia_guardian_blue/idle.png', 'Guardian de la collection Gaia s vengeance', 94),
 ('/guardian/gaia/gaia_guardian_green/idle.png', 'Guardian de la collection Gaia s vengeance', 95),
