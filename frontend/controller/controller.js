@@ -17,6 +17,16 @@ exports.Armes = (req, res) => {
     });
 }
 
+exports.Armesbyid = (req,res) => {
+    GetArmesById(req.query.id).then(armes => {
+        console.log("arme : ", armes)
+        res.render(`../views/temps/armesdetail/`, {armes});
+    })    
+    .catch(error => {
+        console.log("error : " + error);
+    });
+}
+
 async function GetArmes(){
     try {
         const data = await fetch('http://localhost:4000/armes');
@@ -26,18 +36,32 @@ async function GetArmes(){
     }
 };
 
+async function GetArmesById(id){
+    try {
+        const data = await fetch(`http://localhost:4000/armes/${id}`);
+        console.log(data)   
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
+};
 
 
+async function GetSkins() {
+    try {
+        const data = await fetch('http://localhost:4000/skins');
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
+};
 
-async function getSkins() {
-    fetch(`${baseUrl}/skins`)
-    .then(response =>{
-        return response.json();
-    })
-    .then(data => {
-        console.log(data, 'ca marche ?');
-    })
-    .catch(error => {
-        console.log("error : " + error);
-    });
+async function GetSkinById(id){
+    try {
+        const data = await fetch(`http://localhost:4000/skin/${id}`);
+        console.log(data)   
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
 };
