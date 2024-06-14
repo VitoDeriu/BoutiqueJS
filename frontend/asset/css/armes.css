@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container{
+    background-color: rgb(180, 180, 180);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ctn-arme{
+    background-color: rgb(80, 80, 80);
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-arme{
+    display: flex;
+    justify-content: center;
+}
+
+.image-arme img{
+    width: 95%;
+}
