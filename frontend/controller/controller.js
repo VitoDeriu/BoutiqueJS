@@ -4,7 +4,9 @@
 };
 
 exports.SkinDetail = (req, res) => {
-    res.render("../views/temps/skindetail");
+    elem = GetSkinById(req.query.id)
+    img = GetImageById(req.query.id)
+    res.render("../views/temps/skindetail", elem, img);
 };
 
 exports.Armes = (req, res) => {
@@ -15,7 +17,7 @@ exports.Armes = (req, res) => {
     .catch(error => {
         console.log("error : " + error);
     });
-}
+};
 
 exports.Armesbyid = (req,res) => {
     GetArmesById(req.query.id).then(armes => {
@@ -25,7 +27,7 @@ exports.Armesbyid = (req,res) => {
     .catch(error => {
         console.log("error : " + error);
     });
-}
+};
 
 async function GetArmes(){
     try {
@@ -46,7 +48,6 @@ async function GetArmesById(id){
     }
 };
 
-
 async function GetSkins() {
     try {
         const data = await fetch('http://localhost:4000/skins');
@@ -58,10 +59,23 @@ async function GetSkins() {
 
 async function GetSkinById(id){
     try {
-        const data = await fetch(`http://localhost:4000/skin/${id}`);
-        console.log(data)   
-        return data.json();
+        await fetch(`http://localhost:4000/skin/${id}`).then(
+            console.log("test")
+        )
+        
+        
     } catch (error) {
+
+        console.log(error)
+    }
+};
+
+async function GetImageById(id){
+    try{
+        const data = await fetch(`http://localhost:4000/image/${id}`);
+        console.log(data.json)
+        return data.json();
+    } catch (error){
         console.log(error)
     }
 };

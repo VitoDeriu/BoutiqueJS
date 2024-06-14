@@ -76,7 +76,7 @@ class ModelsTest {
 
     static GetImageId(id) {
         return new Promise ((resolve, reject) => {
-            let sqlRequest = sql.format('SELECT * FROM images WHERE images.id_image = ?', [id]);
+            let sqlRequest = sql.format('SELECT * FROM images WHERE images.id_skin = ?', [id]);
             sql.query(sqlRequest, (err, data) => {
                 if (err) {
                     reject(err);
