@@ -469,7 +469,7 @@ VALUES
         ('RES Ghost', 2000, NULL, 'Ghost de la collection Radiant Entertainment System - purple', 5, 47),
         
         #Sheriff
-        ('Arcane Sheriff', 2000, NULL, 'Sheriff de l edition limitee Arcane - base', 6, 48),
+        ('Arcane Sheriff', 6000, NULL, 'Sheriff de l edition limitee Arcane - base', 6, 48),
         ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - base', 6, 41),
         ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - black', 6, 42),
         ('Reaver Sheriff', 2000, NULL, 'Sheriff de la collection Reaver - red', 6, 43),
@@ -1688,4 +1688,4 @@ VALUES
 ('/odin/glitchpop/glitchpop_odin_base/icone.png', 'Odin de la collection glitchpop - base', 210),
 ('/odin/glitchpop/glitchpop_odin_blue/icone.png', 'Odin de la collection glitchpop - blue', 211),
 ('/odin/glitchpop/glitchpop_odin_gold/icone.png', 'Odin de la collection glitchpop - gold', 212),
-('/odin/glitchpop/glitchpop_odin_red/icone.png', 'Odin de la collection glitchpop - red', 213),
+('/odin/glitchpop/glitchpop_odin_red/icone.png', 'Odin de la collection glitchpop - red', 213);
