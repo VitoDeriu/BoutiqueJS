@@ -2,12 +2,6 @@ exports.Index = (req, res) => {
   res.render("../views/temps/index");
 };
 
-exports.SkinDetail = (req, res) => {
-  elem = GetSkinById(req.query.id);
-  img = GetImageById(req.query.id);
-  res.render("../views/temps/skindetail", elem, img);
-};
-
 exports.Armes = (req, res) => {
   GetArmes()
     .then((armes) => {
@@ -49,19 +43,24 @@ async function GetArmesById(id) {
   }
 }
 
-async function GetSkins() {
-  try {
-    const data = await fetch("http://localhost:4000/skins");
-    return data.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
+exports.SkinDetail = (req, res) => {
+  const skininfo = req.query.id;
+	const imageinfo = req.query.id;
+
+	Promise.all([GetSkinById(skininfo), GetImageById(imageinfo)])
+		.then(([skin, image]) => {
+			res.render(`../views/temps/skindetail`, { skin, image});
+		})
+		.catch((error) => {
+			console.log("error : " + error);
+		});
+};
 
 async function GetSkinById(id) {
   try {
-    await fetch(`http://localhost:4000/skin/${id}`).then(console.log("test"));
-  } catch (error) {
+    const data = await fetch(`http://localhost:4000/skin/${id}`);
+		return data.json();
+	} catch (error) {
     console.log(error);
   }
 }
@@ -69,7 +68,7 @@ async function GetSkinById(id) {
 async function GetImageById(id) {
   try {
     const data = await fetch(`http://localhost:4000/image/${id}`);
-    console.log(data.json);
+    // data.imagePath = `http://localhost:4000/backend/api/img/${data.path}`;
     return data.json();
   } catch (error) {
     console.log(error);

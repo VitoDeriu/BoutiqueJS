@@ -7,7 +7,7 @@ const fs = require('fs');
 //Crée une application express 
 const app = express();
 app.use(cors());
-app.use("/asset", express.static(path.join(__dirname,"/asset"))); //crée la route static
+app.use("/public", express.static(path.join(__dirname,"/assets"))); //crée la route static
 
 //pour lire le body
 app.use(express.json());
