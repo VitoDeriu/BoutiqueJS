@@ -49,6 +49,14 @@ class ControllerTest {
         })
     }
 
+    static GetBaseImageId(req, res) {
+        ModelTest.GetBaseImageId(req.params.id).then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
+
     static GetVariante(req, res) {
         ModelTest.GetVariante().then(data => {
             return res.json(data);
@@ -67,6 +75,14 @@ class ControllerTest {
 
     static GetArmesTypeId(req, res) {
         ModelTest.GetArmesTypeId(req.params.id).then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
+
+    static GetSkinIdByArmeId(req, res) {
+        ModelTest.GetSkinIdByArmeId(req.params.id).then(data => {
             return res.json(data);
         }).catch(err => {
             return res.status(500).json(err);

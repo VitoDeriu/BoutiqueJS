@@ -22,7 +22,11 @@ class ModelsTest {
                     reject(err);
                     return;
                 }
-                if (data.length) {
+                if (data.length === 1) {
+                    resolve(data[0]);
+                    return;
+                }
+                if (data.lenght){
                     resolve(data);
                     return;
                 }
@@ -52,7 +56,11 @@ class ModelsTest {
                     reject(err);
                     return;
                 }
-                if (data.length) {
+                if (data.length === 1) {
+                    resolve(data[0]);
+                    return;
+                }
+                if (data.lenght) {
                     resolve(data);
                     return;
                 }
@@ -84,6 +92,23 @@ class ModelsTest {
                 }
                 if (data.length) {
                     resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
+
+    static GetBaseImageId(id) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format('SELECT * FROM images WHERE images.id_skin = ?', [id]);
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data[0]);
                     return;
                 }
                 reject ('No data found');
@@ -124,6 +149,23 @@ class ModelsTest {
     static GetArmesTypeId(id) {
         return new Promise ((resolve, reject) => {
             let sqlRequest = sql.format('SELECT * FROM armes WHERE armes.id_type = ?', [id]);
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
+
+    static GetSkinIdByArmeId(idArme) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format('SELECT * FROM armes_skins WHERE armes_skins.id_arme = ?', [idArme]);
             sql.query(sqlRequest, (err, data) => {
                 if (err) {
                     reject(err);

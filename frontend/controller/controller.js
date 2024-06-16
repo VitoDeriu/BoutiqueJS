@@ -4,24 +4,13 @@ exports.Index = (req, res) => {
 
 exports.Armes = (req, res) => {
   GetArmes()
-    .then((armes) => {
-      console.log("arme : ", armes);
-      res.render("../views/temps/armes", { armes });
-    })
-    .catch((error) => {
-      console.log("error : " + error);
-    });
-};
-
-exports.Armesbyid = (req, res) => {
-  GetArmesById(req.query.id)
-    .then((armes) => {
-      console.log("arme : ", armes);
-      res.render(`../views/temps/armesdetail/`, { armes });
-    })
-    .catch((error) => {
-      console.log("error : " + error);
-    });
+  .then((armes) => {
+    // console.log("arme : ", armes);
+    res.render("../views/temps/armes", { armes });
+  })
+  .catch((error) => {
+    console.log("error : " + error);
+  });
 };
 
 async function GetArmes() {
@@ -31,46 +20,99 @@ async function GetArmes() {
   } catch (error) {
     console.log(error);
   }
-}
+};
+
+exports.Armesbyid = (req, res) => {
+  Promise.all([GetArmesById(req.query.id),GetSkinsByArmeId(req.query.id)]) 
+  .then(([armes, skins]) => {
+    console.log("arme : ", armes);
+    console.log("skins : ", skins);
+    res.render(`../views/temps/armesdetail`, { armes, skins });
+  })
+  .catch((error) => {
+    console.log("error : " + error);
+  });
+};
 
 async function GetArmesById(id) {
   try {
     const data = await fetch(`http://localhost:4000/armes/${id}`);
-    console.log(data);
     return data.json();
   } catch (error) {
     console.log(error);
   }
-}
+};
 
+async function GetSkinsByArmeId(armeid) {
+  try {
+    //on appel la table des relation armes_skins pour avoir les id des skins qui correspondent aux id des armes (ex pour l'id du sheriff on va avoir l'id des skins reaver sheriff etc)
+    const response = await fetch(`http://localhost:4000/skinidbyarmeid/${armeid}`);
+    
+    //on convertit le truc en json parceque si non ca casse les couilles  
+    const data = await response.json()
+    
+    //ensuite on récup que les id_skins dans l'ordre et on met ca dans un tableau pour s'en servir dans la fonction getskinbyid
+    const skinIds = data.map(item => item.id_skin);
+    
+    //puis on va chercher pour chaque id de la map le skin qui lui correspond avec le promise.all
+    const skinList = await Promise.all(skinIds.map( //marche comme un forEach sur chaque id dans la map
+      async (id) => {
+      try {
+        //appel des info du skin et de l'image base correspondante
+        const skinData = await GetSkinById(id);
+        const skinImage = await GetBaseImageById(id);
+        //on concatène les deux jsons
+        const skinPreview = {...skinData, ...skinImage};
+        //et on renvoi le tout
+        return skinPreview;
+      } catch (error) {
+        console.error("error : ", error);
+        //ici le return null permet a promise.all de continuer a attendre les promesses en cas d'erreur renvoyé par getskinbyid.
+        return null;
+      }
+    }));
+    //on renvoi skinList dans l'autre fonction pour l'envoyer dans le template
+    return skinList;
+	} catch (error) {
+    console.log(error);
+  }
+};
+
+//renvoi les infos et les image d'un skin grace a son id qui a été passé en query
 exports.SkinDetail = (req, res) => {
-  const skininfo = req.query.id;
-	const imageinfo = req.query.id;
-
-	Promise.all([GetSkinById(skininfo), GetImageById(imageinfo)])
-		.then(([skin, image]) => {
-			res.render(`../views/temps/skindetail`, { skin, image});
-		})
-		.catch((error) => {
-			console.log("error : " + error);
-		});
+	Promise.all([GetSkinById(req.query.id), GetImageById(req.query.id)])
+  .then(([skin, image]) => {
+    res.render(`../views/temps/skindetail`, { skin, image});
+  })
+  .catch((error) => {
+    console.log("error : " + error);
+  });
 };
 
 async function GetSkinById(id) {
   try {
-    const data = await fetch(`http://localhost:4000/skin/${id}`);
-		return data.json();
+    const response = await fetch(`http://localhost:4000/skin/${id}`);
+    const data = await response.json();
+		return data;
 	} catch (error) {
     console.log(error);
   }
-}
+};
 
 async function GetImageById(id) {
   try {
     const data = await fetch(`http://localhost:4000/image/${id}`);
-    // data.imagePath = `http://localhost:4000/backend/api/img/${data.path}`;
     return data.json();
   } catch (error) {
     console.log(error);
   }
-}
+};
+
+async function GetBaseImageById(id) {
+  try {
+    const data = await fetch(`http://localhost:4000/baseimage/${id}`);
+    return data.json();
+  } catch (error) {
+    console.log(error);
+  }
+};

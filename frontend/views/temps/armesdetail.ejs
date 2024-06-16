@@ -6,6 +6,34 @@
     <title>ValoGear</title>
 </head>
 <body>
+        <div>
+            <p>id arme : <%= armes.id_arme %></p>
+            <p>name arme : <%= armes.name_arme %></p>
+            <p>description : <%= armes.description_arme %></p>
+            <p>fire rate : <%= armes.fire_rate %></p>
+            <p>dmg per bullet : <%= armes.damage_per_bullet %></p>
+            <p>reload speed : <%= armes.reload_speed %></p>
+            <p>penetration : <%= armes.penetration %></p>
+            <p>id type : <%= armes.id_type %></p>
+        </div>
+
+    <% skins.forEach(function(skins){ %>
+        <div>
+            <a href="/skindetail?id=<%= skins.id_skin %>">
+                <p>id_skin : <%= skins.id_skin %></p>
+                <p>name_skin : <%= skins.name_skin %></p>
+                <p>prix : <%= skins.prix %></p>
+                <p>reduction : <%= skins.reduction %></p>
+                <p>description : <%= skins.description %></p>
+                <p>rareté : <%= skins.rarete %></p>
+                <p>id_variante : <%= skins.id_variante %></p>
+                <img src="http://localhost:4000/public/img<%=skins.path%>" alt="<%=skins.alt%>">
+            </a>
+        </div>
+    <% }) %>
+
+    
+
 
 </body>
 </html>

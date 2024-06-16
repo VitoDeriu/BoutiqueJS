@@ -11,7 +11,7 @@
     <%- include('../components/header') %>
     <div class="container">
         <% armes.forEach(function(arme){ %>
-        <a href="/skindetail">
+        <a href="/armesdetail?id=<%= arme.id_arme %>">
            <div class="ctn-arme">
                <div class="image-arme">          
                    <img src="../../public/img/white_weapon/<%- arme.name_arme %>.png" alt="image de <%- arme.name_arme %>">

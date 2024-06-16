@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%- include('../components/head') %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valogear</title>
 </head>
 <body>
+    <%- include('../components/header') %>
 
-    <% skin.forEach(function(skins){ %>
-        <p><%= skins.name_skin %></p>
-        <p><%= skins.prix %></p>
-        <p><%= skins.description_skin %></p>
-        <p><%= skins.id_skin %></p>
-            <% }); %>
+
+        <p><%= skin.name_skin %></p>
+        <p><%= skin.prix %></p>
+        <p><%= skin.description_skin %></p>
+        <p><%= skin.id_skin %></p>
 
     <% image.forEach(function(image){ %>
             <img src="http://localhost:4000/public/img<%= image.path %>" alt="<%= image.alt %>">

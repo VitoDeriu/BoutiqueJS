@@ -11,3 +11,6 @@ mettre cet id que sur les icones, on a pas beosin du reste.
 
 pas besoin de rajouter une colonne pour trier les images, on a qu'a metre l'id collectionarme en pas non NULL
 et on rappel que les images qui ont l'id collection arme dasn le front pour les icones donc on le met que sur les icones
+
+
+faire une table icone avec id_icone path id_variante
