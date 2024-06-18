@@ -9,6 +9,7 @@
 </head>
 <body>
     <%- include('../components/header') %>
+    <div class="bvn">Selectionnez une arme pour voir les skins qui sont disponibles</div>
     <div class="container">
         <% armes.forEach(function(arme){ %>
         <a href="/armesdetail?id=<%= arme.id_arme %>">

@@ -116,6 +116,26 @@ class ModelsTest {
         })
     }
 
+    static GetIconeId(id) {
+        return new Promise ((resolve, reject) => {
+            let sqlRequest = sql.format(
+                'SELECT path, alt FROM skins s JOIN variantes v ON s.id_variante = v.id_variante JOIN icones i ON v.id_icone = i.id_icone WHERE s.id_skin = ?', [id]);
+            
+
+            sql.query(sqlRequest, (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                if (data.length) {
+                    resolve(data);
+                    return;
+                }
+                reject ('No data found');
+            })
+        })
+    }
+
     static GetVariante() {
         return new Promise ((resolve, reject) => {
             const sqlRequest = 'SELECT * FROM variantes';

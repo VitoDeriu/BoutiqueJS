@@ -15,6 +15,7 @@ router.get('/variantes', controller.GetVariante);
 router.get('/variante/:id', controller.GetVarianteId);
 router.get('/armes/type/:id', controller.GetArmesTypeId);
 router.get('/skinidbyarmeid/:id', controller.GetSkinIdByArmeId);
+router.get('/iconeid/:id', controller.GetIconeId);
 
 //export du module router
 module.exports = router;

@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%- include('../components/head') %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ValoGear</title>
+    <link rel="stylesheet" href="public/css/armesdetail.css">
 </head>
 <body>
-        <div>
-            <p>id arme : <%= armes.id_arme %></p>
-            <p>name arme : <%= armes.name_arme %></p>
-            <p>description : <%= armes.description_arme %></p>
-            <p>fire rate : <%= armes.fire_rate %></p>
-            <p>dmg per bullet : <%= armes.damage_per_bullet %></p>
-            <p>reload speed : <%= armes.reload_speed %></p>
-            <p>penetration : <%= armes.penetration %></p>
-            <p>id type : <%= armes.id_type %></p>
+    <%- include('../components/header'); %>
+    <main>
+        <div class="armes-detail">
+            <img src="public/img/black_weapon/<%= armes.name_arme %>.png" alt="Image de <%= armes.name_arme %>">
+            <div class="description">
+                <p class="nom-arme"><%= armes.name_arme %></p>
+                <p>description : <%= armes.description_arme %></p>
+                <p>fire rate : <%= armes.fire_rate %> bullet/s</p>
+                <p>dmg per bullet : <%= armes.damage_per_bullet %></p>
+                <p>reload speed : <%= armes.reload_speed %>s</p>
+                <p>penetration : 
+                    <% if (armes.penetration === 0) { %>
+                        None
+                    <% } else if (armes.penetration === 1) {%>
+                        Low
+                    <% } else if (armes.penetration === 2) {%>
+                        Medium
+                    <% } else if (armes.penetration === 3) {%>
+                        High
+                    <% } %>  
+                </p>
+                    <% if (armes.id_type === 1) { %>
+                        Melee                    
+                    <% } else if (armes.id_type === 2) {%>
+                        Arme de poing
+                    <% } else if (armes.id_type === 3) {%>
+                        Pistolet mitrailleur
+                    <% } else if (armes.id_type === 4) {%>
+                        Fusil d'assaut
+                    <% } else if (armes.id_type === 5) {%>
+                        Fusil à pompe
+                    <% } else if (armes.id_type === 6) {%>
+                        Mitrailleuse
+                    <% } else if (armes.id_type === 7) {%>
+                        Fusil de précision
+                    <% } %>
+            </div>
         </div>
 
-    <% skins.forEach(function(skins){ %>
-        <div>
-            <a href="/skindetail?id=<%= skins.id_skin %>">
-                <p>id_skin : <%= skins.id_skin %></p>
-                <p>name_skin : <%= skins.name_skin %></p>
-                <p>prix : <%= skins.prix %></p>
-                <p>reduction : <%= skins.reduction %></p>
-                <p>description : <%= skins.description %></p>
-                <p>rareté : <%= skins.rarete %></p>
-                <p>id_variante : <%= skins.id_variante %></p>
-                <img src="http://localhost:4000/public/img<%=skins.path%>" alt="<%=skins.alt%>">
-            </a>
+        <div class="skin-detail">
+            <% skins.forEach(function(skins){ %>
+                <a href="/skindetail?id=<%= skins.id_skin %>" class="skin-ctn">
+                    <img src="http://localhost:4000/public/img<%=skins.path%>" alt="<%=skins.alt%>">
+                    <p class="nom-arme"><%= skins.name_skin %></p>
+                </a>
+            <% }) %>
         </div>
-    <% }) %>
-
-    
-
-
+    </main>
 </body>
-</html>
+</html> 

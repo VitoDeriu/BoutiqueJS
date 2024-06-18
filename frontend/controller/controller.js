@@ -1,5 +1,8 @@
 exports.Index = (req, res) => {
-  res.render("../views/temps/index");
+  GetSkins()
+  .then((skins)=>{
+    res.render("../views/temps/index", {skins});
+  })
 };
 
 exports.Armes = (req, res) => {
@@ -25,8 +28,6 @@ async function GetArmes() {
 exports.Armesbyid = (req, res) => {
   Promise.all([GetArmesById(req.query.id),GetSkinsByArmeId(req.query.id)]) 
   .then(([armes, skins]) => {
-    console.log("arme : ", armes);
-    console.log("skins : ", skins);
     res.render(`../views/temps/armesdetail`, { armes, skins });
   })
   .catch((error) => {
@@ -48,7 +49,7 @@ async function GetSkinsByArmeId(armeid) {
     //on appel la table des relation armes_skins pour avoir les id des skins qui correspondent aux id des armes (ex pour l'id du sheriff on va avoir l'id des skins reaver sheriff etc)
     const response = await fetch(`http://localhost:4000/skinidbyarmeid/${armeid}`);
     
-    //on convertit le truc en json parceque si non ca casse les couilles  
+    //on convertit le truc en json
     const data = await response.json()
     
     //ensuite on récup que les id_skins dans l'ordre et on met ca dans un tableau pour s'en servir dans la fonction getskinbyid
@@ -80,13 +81,23 @@ async function GetSkinsByArmeId(armeid) {
 
 //renvoi les infos et les image d'un skin grace a son id qui a été passé en query
 exports.SkinDetail = (req, res) => {
-	Promise.all([GetSkinById(req.query.id), GetImageById(req.query.id)])
-  .then(([skin, image]) => {
-    res.render(`../views/temps/skindetail`, { skin, image});
+	Promise.all([GetSkinById(req.query.id), GetImageById(req.query.id), GetIconeById(req.query.id)])
+  .then(([skin, image, icone]) => {
+    res.render(`../views/temps/skindetail`, { skin, image, icone});
   })
   .catch((error) => {
     console.log("error : " + error);
   });
+};
+
+async function GetSkins() {
+  try {
+    const response = await fetch(`http://localhost:4000/skins`);
+    const data = await response.json();
+		return data;
+	} catch (error) {
+    console.log(error);
+  }
 };
 
 async function GetSkinById(id) {
@@ -112,6 +123,17 @@ async function GetBaseImageById(id) {
   try {
     const data = await fetch(`http://localhost:4000/baseimage/${id}`);
     return data.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+async function GetIconeById(id) {
+  try {
+    const response = await fetch(`http://localhost:4000/iconeid/${id}`);
+    const data = await response.json()
+    console.log(data)
+    return data;
   } catch (error) {
     console.log(error);
   }

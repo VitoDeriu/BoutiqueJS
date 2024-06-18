@@ -4,6 +4,15 @@ body{
     text-decoration: none;
 }
 
+.bvn{
+    height: 50px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+}
+
 .container{
     background-color: rgb(180, 180, 180);
     width: 100%;

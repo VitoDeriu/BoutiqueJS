@@ -11,6 +11,16 @@
  <%- include('../components/header'); %>
 <main>
     VALOGEAR
+
+    <div class="bienvenue">
+        Bienvenue sur Valogear
+    </div>
+
+    <div class="allskin">
+        <% skins.forEach(function(skin) { %>
+            <p><%- skin.description_skin %></p>
+        <%});%>
+    </div>
 </main>
 
 <footer>

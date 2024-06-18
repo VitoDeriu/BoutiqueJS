@@ -57,6 +57,14 @@ class ControllerTest {
         })
     }
 
+    static GetIconeId(req, res) {
+        ModelTest.GetIconeId(req.params.id).then(data => {
+            return res.json(data);
+        }).catch(err => {
+            return res.status(500).json(err);
+        })
+    }
+
     static GetVariante(req, res) {
         ModelTest.GetVariante().then(data => {
             return res.json(data);
